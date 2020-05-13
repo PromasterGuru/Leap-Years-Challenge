@@ -8,7 +8,6 @@ package leapyear;
 import static org.junit.Assert.assertEquals;
 import org.junit.Test;
 
-
 /**
  *
  * @author promasterguru
@@ -34,7 +33,7 @@ public class LeapYearTest {
      */
     @Test
     public void testWithYearsDivisibleBy100ButNotBy400(){
-        int year = 2000;
+        int year = 1900;
         boolean expResult = false;
         boolean result = instance.isLeapYear(year);
         assertEquals(expResult, result);
@@ -46,7 +45,7 @@ public class LeapYearTest {
      */
     @Test
     public void testWithYearsDivisibleBy4ButNotBy100() {
-        int year = 2008;
+        int year = 2016;
         boolean expResult = true;
         boolean result = instance.isLeapYear(year);
         assertEquals(expResult, result);
@@ -58,7 +57,7 @@ public class LeapYearTest {
      */
     @Test
     public void testWithYearsNotDivisibleBy() {
-        int year = 2017;
+        int year = 2019;
         boolean expResult = false;
         boolean result = instance.isLeapYear(year);
         assertEquals(expResult, result);
