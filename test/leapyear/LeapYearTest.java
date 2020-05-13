@@ -76,7 +76,7 @@ public class LeapYearTest {
      */
     @Test
     public void testWithYearsDivisibleBy4000() {
-        int year = 4000;
+        int year = 12000;
         boolean expResult = false;
         boolean result = instance.isLeapYear(year);
         assertEquals(expResult, result);

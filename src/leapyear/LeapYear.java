@@ -16,7 +16,7 @@ public class LeapYear {
         boolean valid = false;
         if(year%4 == 0){
             valid = true;
-            if(year%100 == 0 && year%400 != 0){
+            if((year%100 == 0 && year%400 != 0) || year%4000 ==0){
                 valid = false;
             }
         }
