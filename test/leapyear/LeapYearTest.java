@@ -1,7 +1,14 @@
-/*
- * To change this license header, choose License Headers in Project Properties.
- * To change this template file, choose Tools | Templates
- * and open the template in the editor.
+/***************************************************
+ *              LEAP YEARS
+ * This short and simple Kata should be performed in 
+ * pairs using Test Driven Development (TDD).
+ *              
+ *              ACCEPTANCE CRITERIA
+ * All years divisible by 400 ARE leap years (so, for example, 2000 was indeed a leap year),
+ * All years divisible by 100 but not by 400 are NOT leap years 
+ * (so, for example, 1700, 1800, and 1900 were NOT leap years, NOR will 2100 be a leap year),
+ * All years divisible by 4 but not by 100 ARE leap years (e.g., 2008, 2012, 2016),
+ * All years not divisible by 4 are NOT leap years (e.g. 2017, 2018, 2019).
  */
 package leapyear;
 
@@ -56,8 +63,20 @@ public class LeapYearTest {
      * e.g. 2017, 2018, 2019.
      */
     @Test
-    public void testWithYearsNotDivisibleBy() {
+    public void testWithYearsNotDivisibleBy4() {
         int year = 2019;
+        boolean expResult = false;
+        boolean result = instance.isLeapYear(year);
+        assertEquals(expResult, result);
+    }
+    
+    /**
+     * Test of years divisible by 4000 are NOT leap years 
+     * e.g. 4000, 8000, 12000.
+     */
+    @Test
+    public void testWithYearsDivisibleBy4000() {
+        int year = 12000;
         boolean expResult = false;
         boolean result = instance.isLeapYear(year);
         assertEquals(expResult, result);
