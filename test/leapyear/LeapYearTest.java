@@ -63,7 +63,7 @@ public class LeapYearTest {
      * e.g. 2017, 2018, 2019.
      */
     @Test
-    public void testWithYearsNotDivisibleBy() {
+    public void testWithYearsNotDivisibleBy4() {
         int year = 2019;
         boolean expResult = false;
         boolean result = instance.isLeapYear(year);
