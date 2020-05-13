@@ -1,13 +1,7 @@
-/*
- * To change this license header, choose License Headers in Project Properties.
- * To change this template file, choose Tools | Templates
- * and open the template in the editor.
- */
 package leapyear;
 
 import static org.junit.Assert.assertEquals;
 import org.junit.Test;
-
 
 /**
  *
@@ -34,7 +28,7 @@ public class LeapYearTest {
      */
     @Test
     public void testWithYearsDivisibleBy100ButNotBy400(){
-        int year = 2000;
+        int year = 1900;
         boolean expResult = false;
         boolean result = instance.isLeapYear(year);
         assertEquals(expResult, result);
@@ -46,7 +40,7 @@ public class LeapYearTest {
      */
     @Test
     public void testWithYearsDivisibleBy4ButNotBy100() {
-        int year = 2008;
+        int year = 2016;
         boolean expResult = true;
         boolean result = instance.isLeapYear(year);
         assertEquals(expResult, result);
@@ -58,7 +52,7 @@ public class LeapYearTest {
      */
     @Test
     public void testWithYearsNotDivisibleBy() {
-        int year = 2017;
+        int year = 2019;
         boolean expResult = false;
         boolean result = instance.isLeapYear(year);
         assertEquals(expResult, result);
