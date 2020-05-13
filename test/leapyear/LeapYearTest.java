@@ -69,4 +69,16 @@ public class LeapYearTest {
         boolean result = instance.isLeapYear(year);
         assertEquals(expResult, result);
     }
+    
+    /**
+     * Test of years divisible by 4000 are NOT leap years 
+     * e.g. 4000, 8000, 12000.
+     */
+    @Test
+    public void testWithYearsDivisibleBy4000() {
+        int year = 4000;
+        boolean expResult = false;
+        boolean result = instance.isLeapYear(year);
+        assertEquals(expResult, result);
+    }
 }
